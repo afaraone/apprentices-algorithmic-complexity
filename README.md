@@ -199,20 +199,14 @@ The set approach is unambiguously better. The time complexity is significantly i
 ---
 
 ## Detect Palindrome
+A palindrome is a word that is the same backwards - like `racecar`, `bob`
 
 ### Brute-force Approach
-Iterate through both arrays and return value when they're the same
+Create a new reversed string and compare
 
 ```ruby
-def intersection(array_a, array_b)
-  results = []
-  array_a.each do |a|
-    array_b.each do |b|
-      results << a if a == b
-    end
-  end
-
-  return results
+def palindrome?(string)
+  string == string.reverse # Take O(N) Space to create a new variable for the reversed string
 end
 ```
 
@@ -227,7 +221,7 @@ Pros: Conceptually simple. Easy to write.
 Cons: Creates a copy of the string, using additional memory.
 
 ### Using Pointers
-Point at first  of string and end of string. If not equal return false, otherwise continue with 2nd character and 2nd last character. Repeat until you hit the middle.
+Point at first character of string and last character of string. If not equal return false, otherwise continue with 2nd character and 2nd last character. Repeat until you hit the middle.
 
 ```ruby
 def palindrome_two_pointers?(string)
