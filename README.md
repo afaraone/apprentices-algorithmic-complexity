@@ -200,8 +200,6 @@ The set approach is unambiguously better. The time complexity is significantly i
 
 ## Detect Palindrome
 
-For simplicity's sake assume the arrays are of equal length.
-
 ### Brute-force Approach
 Iterate through both arrays and return value when they're the same
 
