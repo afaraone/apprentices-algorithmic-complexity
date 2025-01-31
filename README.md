@@ -245,7 +245,7 @@ end
 
 #### Time Complexity
 O(N) - In reality it takes N/2 time, as we're only iterating till we hit the middle. This simplifies down to O(N) as it is still linear.
-You may be thinking - doesn't `string.length` involve iterating through entire string to calculate the size? Nope 😊 Strings inherently contain this value. It only takes O(1) time to fetch it!
+You may be thinking - doesn't `string.length` involve traversing through the entire string to calculate the size? Nope 😊 Strings have their size precomputed so no traversal required! It only takes O(1) time to fetch it!
 
 > In most common Ruby implementations (CRuby, YARV, etc.), calling str.length (or equivalently str.size) is a constant-time operation, or O(1).
 > String Representation:  Ruby strings are often implemented internally in a way that stores the length of the string along with the string's character data.  This means that when you call str.length, the length is readily available; the interpreter doesn't have to traverse the entire string to count the characters.
